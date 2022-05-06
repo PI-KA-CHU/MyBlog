@@ -5,7 +5,8 @@ date = "2019-08-04"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
 	"java",
-	"mysql"
+	"mysql",
+    "spring"
 ]
 categories = [
     "IT"

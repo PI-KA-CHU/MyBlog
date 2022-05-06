@@ -4,7 +4,8 @@ title = "阿里云部署SpringBoot"
 date = "2018-11-29"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "开发工具"
+    "开发工具",
+    "spring-boot"
 ]
 categories = [
     "IT",

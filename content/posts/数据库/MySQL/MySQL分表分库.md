@@ -7,7 +7,7 @@ tags = [
 	"mysql"
 ]
 categories = [
-    "IT"
+    "IT","数据库"
 ]
 +++
 
@@ -49,7 +49,7 @@ categories = [
 
 - MySQL的主从复制解决了数据库的**读写分离**，并很好的提升了读的性能
     - **主数据库负责写，从数据库负责读**，主库写入数据后会同步到从库
-![image](http://static.oschina.net/uploads/img/201402/13104102_nxBO.jpg)
+    ![image](http://static.oschina.net/uploads/img/201402/13104102_nxBO.jpg)
 
 
 - 仍存在的问题：
@@ -121,6 +121,7 @@ categories = [
     - 对冷数据进行更多的**从库配置**，因为更多的操作是查询，这样来加快查询速度。对热数据，可以相对有更多的主库的**横向分表**处理。
     - 对于一些特殊的活跃数据，也可以考虑使用**memcache**,**redis**之类的缓存，等累计到一定量再去更新数据库
     
+
 &nbsp;
 
 #### 参考

@@ -3,13 +3,13 @@ author = "pikachu"
 title = "Web安全入门"
 date = "2019-12-07"
 description = "Lorem Ipsum Dolor Si Amet"
-draft = true
 tags = [
 	"安全"
 ]
 categories = [
     "IT"
 ]
+
 +++
 
 ## 一、Web安全入门

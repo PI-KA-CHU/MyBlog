@@ -1,0 +1,3 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/PI-KA-CHU/PI-KA-CHU.github.io.git

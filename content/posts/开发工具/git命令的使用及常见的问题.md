@@ -61,4 +61,17 @@ git pull  // 拉取远程项目
 
 
 
+#### 添加目标git项目作为submodule到public目录中
 
+```
+git submodule add https://github.com/PI-KA-CHU/PI-KA-CHU.github.io.git public
+
+问题：
+'public' already exists in the index
+
+解决：
+1. git ls-files --stage public
+2. 看到 160000开头的目录
+3. git rm --cached public
+4. 重新添加
+```

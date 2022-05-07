@@ -4,8 +4,7 @@ title = "UML期末复习"
 date = "2019-01-09"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "java",
-	"复习"
+    "java"
 ]
 categories = [
     "IT",
@@ -237,5 +236,4 @@ categories = [
 
 - https://zhuanlan.zhihu.com/p/44518805
 - http://wenku.uml.com.cn/document.asp?fileid=16458&partname=UML
-
 

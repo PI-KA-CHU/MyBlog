@@ -30,6 +30,29 @@ The file structure of `repo` is roughly referred to [hexo-theme-pure](https://gi
      <img src="https://raw.githubusercontent.com/xiaoheiAh/imgs/master/20191121103534.png" alt="not-set-mmark" style="zoom:50%;" />
    <img src="https://raw.githubusercontent.com/xiaoheiAh/imgs/master/20191121104118.png" alt="set-mmark" style="zoom:50%;" />
 
+3. [2019-12-07] beautify toc by [tocbot](https://github.com/tscanlin/tocbot/)
+
+4. [2019-12-24] support pagination
+
+5. [2019-12-31] 
+   1. support highlight shortcode Note: Just compatible with basic `highlight` usage like:
+   
+      ```html
+      {{< highlight go >}}
+      // ... code
+      {{< / highlight >}}
+      ```
+
+     If you use hugo official example like,rendering will be very ugly.I don't want to compatible with it or maybe you want. Don't forget send a pr~ thanks.
+   
+     ```html
+      {{< highlight go "linenos=table,hl_lines=8 15-17,linenostart=199" >}}
+      // ... code
+      {{< / highlight >}}
+     ```
+   
+   2. Minify css&js file.
+
 ## Screenshots
 
 ![](https://raw.githubusercontent.com/xiaoheiAh/hugo-theme-pure/master/images/grey.png)
@@ -104,7 +127,7 @@ enable toc
 ## TODO
 
 - [x] TOC
-- [ ] pagination
+- [x] pagination
 
 ## License
 

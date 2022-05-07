@@ -4,8 +4,7 @@ title = "Python期末复习"
 date = "2019-01-06"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "java",
-	"复习"
+    "java"
 ]
 categories = [
     "IT",

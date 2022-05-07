@@ -1,11 +1,13 @@
 baseURL: https://example.com/
 theme: pure
 title: Pure theme for Hugo
+copyright: CC BY 4.0 CN
 defaultContentLanguage: en  # en/zh/...
 footnoteReturnLinkContents: ↩
 hasCJKLanguage: true
 paginate: 7
 enableEmoji: true
+PygmentsCodeFences: false
 googleAnalytics: ""      # UA-XXXXXXXX-X 
 permalinks:
   posts: /:year/:month/:filename/
@@ -20,7 +22,7 @@ outputFormats:          # use for search. recommend not to modify
     baseName: "searchindex"
     isPlainText: true
     notAlternative: true
-    
+
 outputs:
     home: ["HTML","RSS","SearchIndex"]  # recommend not to modify
 # sitemap
@@ -33,32 +35,32 @@ menu:
   main:
     - identifier: home
       name: Home
-      title: Home 
+      title: Home
       url: /
       weight: 1
 
     - identifier: archives
       name: Archives
       title: Archives
-      url: /posts
+      url: /posts/
       weight: 2
 
     - identifier: categories
       name: Categories
       title: Categories
-      url: /categories
+      url: /categories/
       weight: 3
 
     - identifier: tags
       name: Tags
       title: Tags
-      url: /tags
+      url: /tags/
       weight: 4
 
     - identifier: about
       name: About
       title: About
-      url: /about
+      url: /about/
       weight: 5
 
 
@@ -66,11 +68,22 @@ params:
   since: 2017
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
+  copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
   # the directory under content folder that you want to render
   mainSections: ["posts"]
   # Enable/Disable menu icons
   # Icon Reference: http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html
   enableMathJax: true #Enable mathjax support, to use mathematical notations
+  highlightjs:
+    langs: ["python", "javascript"] # refer to http://staticfile.org/, search highlight.js, already have highlight.min.js
+
+  tag_cloud:
+    min: 8
+    max: 20
+  # Allows you to specify an override stylesheet
+  # put custom.css in $hugo_root_dir/static/
+  # customCSS: css/custom.css
+
   menuIcons:
     enable: true  # 是否启用导航菜单图标
     home: icon-home-fill
@@ -169,8 +182,8 @@ params:
 
   # config
   config:
-    skin: # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
-    layout: main-center # 布局方式 main-left main-center main-right
+    skin: theme-black # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
+    layout: main-center # main-left main-center main-right
     excerpt_link: Read More
     toc: true
 
@@ -184,6 +197,7 @@ params:
   # Sidebar only the following widgets. you can remove any you don't like it.
   widgets:
     - board
+    - tag_cloud
     - category
     - tag
     - recent_posts

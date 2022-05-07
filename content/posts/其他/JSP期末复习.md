@@ -4,8 +4,7 @@ title = "JSP期末复习"
 date = "2019-01-03"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "java",
-	"复习"
+    "java"
 ]
 categories = [
     "IT",
@@ -182,7 +181,7 @@ session.removeAttribute(key)：删除当前会话中的属性
 
 ```
 
- 
+
 **pageContext：**
 - [ ] 类型：javax.servlet.jsp.PageContext
 - [ ] 描述：本JSP的⻚⾯上下⽂。
@@ -274,7 +273,7 @@ application.setAttribute("", "");
 - 标签库描述文件格式：http://book.51cto.com/art/201004/193459.htm
 
 &nbsp;
- 
+
 ## 动态include与静态include的区别
 
 - **静态include：** `<%@include file="include.html" %>`
@@ -304,4 +303,3 @@ application.setAttribute("", "");
 -  https://www.cnblogs.com/zhangyinhua/p/7637399.html#_label1
 
 <hr>
-

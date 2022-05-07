@@ -14,19 +14,23 @@
         {{- partial "post/category.html" . }}
         {{- partial "post/tag.html" . }}
         {{- partial "post/pv.html" . }}
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="{{ .RelPermalink }}#comments"
+        {{- if .Site.Params.comment.type }}
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="{{ .RelPermalink }}#comments"
             class="article-comment-link">{{T "article_comments" }}</a></span>
+        {{- end }}
         {{- partial "post/wc.html" . }}
       </div>
     </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       {{ .Content }}
     </div>
     <div class="article-footer">
       {{- partial "post/copyright.html" . }}
     </div>
   </article>
+  {{- if (.Site.Params.comment.type) }}
   {{- partial "post/comment.html" . }}
+  {{- end }}
 </div>
 {{- partial "post/nav.html" . }}
 {{- partial "post/donate.html" . }}

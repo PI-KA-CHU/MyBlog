@@ -34,3 +34,6 @@ categories = [
 
 
 
+配置记录：
+
+- 头部加入：`draft = true`可以隐藏该md，即不被hugo构建

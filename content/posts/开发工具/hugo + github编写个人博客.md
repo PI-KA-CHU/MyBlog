@@ -3,7 +3,7 @@
 author = "pikachu"
 title = "hugo + github编写个人博客"
 date = "2022-05-06"
-description = "hugo"
+description = " "
 draft = false
 tags = [
 	"开发工具"

@@ -2,7 +2,7 @@
 author = "pikachu"
 title = "JUC包结构及AQS抽象队列同步器"
 date = "2020-01-03"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "Java",

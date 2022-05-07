@@ -4,11 +4,10 @@ title = "Servlet及JavaBean期末复习"
 date = "2019-01-05"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "java",
-	"复习"
+    "java"
 ]
 categories = [
-    "IT",
+    "IT"
 ]
 +++
 

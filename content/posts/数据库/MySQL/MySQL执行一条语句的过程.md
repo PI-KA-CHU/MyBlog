@@ -3,10 +3,9 @@
 author = "pikachu"
 title = "MySQL执行一条语句的过程"
 date = "2022-03-10"
-description = " InnoDB存储引擎，redo log，undo log，bin log"
-draft = true
+description = " InnoDB，redo log，undo log，bin log"
 tags = [
-    "java", "mysql"
+    "mysql"
 ]
 categories = [
     "IT","数据库"
@@ -14,9 +13,11 @@ categories = [
 
 +++
 
+## 
+
+
+
 - https://www.pdai.tech/md/db/sql-mysql/sql-mysql-execute.html
-
-
 
 
 

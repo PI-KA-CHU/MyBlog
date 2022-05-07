@@ -32,7 +32,7 @@ categories = [
   - 执行命令根目录下执行 `hugo server -D`
   - 进入：localhost:1313
 
-![image-20220507155512665](C:\Users\Benjamin\AppData\Roaming\Typora\typora-user-images\image-20220507155512665.png)
+![image-20220507155512665](..\..\images\Snipaste_2022-05-07_16-00-38.png)
 
 配置记录：
 

@@ -75,3 +75,15 @@ git submodule add https://github.com/PI-KA-CHU/PI-KA-CHU.github.io.git public
 3. git rm --cached public
 4. 重新添加
 ```
+
+
+
+#### 重置本地修改
+
+```
+# 忽略本地修改，使用远方分支
+git reset --hard origin/master
+```
+
+
+

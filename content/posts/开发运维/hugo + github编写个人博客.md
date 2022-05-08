@@ -61,3 +61,7 @@ categories = [
 3. 进入相关的密钥界面，在以下红框内填入第一步生成的密钥并保存即可
 
 <img src="../../images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220508234354685.png" alt="image-20220508234354685" style="zoom:80%;" />
+
+
+
+![image-20220509000145540](images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220509000145540.png)

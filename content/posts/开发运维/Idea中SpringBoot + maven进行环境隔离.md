@@ -2,15 +2,15 @@
 author = "pikachu"
 title = "Idea中SpringBoot + maven进行环境隔离"
 date = "2019-02-08"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
-	"spring-boot",
-	"开发工具"
+	"",
+	"spring-boot","开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "Docker实战：3、三剑客之Docker Compose"
 date = "2019-08-22"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
 	"docker",
-	"开发工具"
+	"部署工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

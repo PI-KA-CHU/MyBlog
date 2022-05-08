@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "Flume收集日志 - windows（实战版二）"
 date = "2019-05-22"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 

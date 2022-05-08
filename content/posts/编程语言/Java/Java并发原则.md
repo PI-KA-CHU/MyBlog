@@ -2,16 +2,16 @@
 author = "pikachu"
 title = "Java happens-before及as-if-serial原则"
 date = "2019-12-30"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
-    "Java",
-    "多线程",
-    "网易微专业"
+    "",
+    "多线程"
 ]
 categories = [
-    "IT"
+    "it","java"
 ]
+
 +++
 
 

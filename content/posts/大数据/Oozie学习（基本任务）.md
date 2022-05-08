@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "Oozie学习（基本任务）"
 date = "2019-08-02"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 
@@ -47,7 +48,7 @@ categories = [
     - 将文件上传到Haoop的HDFS中
     - 通过命令执行oozie任务
     - 查看oozie的执行页面：http://hh:11000/oozie/
-<br>
+    <br>
 
 **文件编写：**
 

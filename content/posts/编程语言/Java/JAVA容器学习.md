@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "Java容器学习"
 date = "2019-07-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java"
+	""
 ]
 categories = [
-    "IT"
+    "it","java"
 ]
+
 +++
 
 
@@ -113,6 +114,7 @@ HashMap的构造方法：
         - *JDK1.8*：取消了分段锁机制，采用`Node 数组（实现了Map接口） + 链表 + 红黑树`，并发控制使用`synchronized `和`CAS`。synchronized只锁定当前链表或红黑二叉树的`首节点`，这样只要hash不冲突，就不会产生并发，效率又提升N倍。
         ![image](https://user-images.githubusercontent.com/38284818/62021143-640ba000-b1f8-11e9-98f7-5a2e79dc5d63.png)
         
+
 &nbsp;
 &nbsp;
 

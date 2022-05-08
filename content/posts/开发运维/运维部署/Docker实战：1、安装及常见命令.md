@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "Docker实战：1、安装及常见命令"
 date = "2019-08-17"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
 	"docker",
-	"开发工具"
+	"部署工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

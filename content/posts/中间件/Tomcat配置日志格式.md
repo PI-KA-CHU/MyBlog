@@ -1,14 +1,14 @@
- +++
++++
 author = "pikachu"
 title = "Tomcat配置日志格式"
 date = "2019-03-30"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "log"
 ]
 categories = [
-    "IT"
+    "It"
 ]
 +++
 
@@ -47,6 +47,7 @@ categories = [
 
     通过设置`fileDateFormat="yyyy-MM-dd.HH.mm"`属性的值可以设置日志的生成时间，如`yyyy-MM-dd.HH.mm`表示每分钟生成一次，`yyyy-MM-dd`表示每天生成一次
     
+
 <br>
 
 - **访问者IP设置**

@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "redis的主从模式配置"
 date = "2019-02-25"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
-	"中间件"
+	"redis"
 ]
 categories = [
-    "IT"
+    "it","中间件"
 ]
+
 +++
 
 

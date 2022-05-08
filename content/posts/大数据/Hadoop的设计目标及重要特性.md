@@ -1,20 +1,21 @@
- +++
++++
 author = "pikachu"
 title = "Hadoop的设计目标及重要特性"
 date = "2019-03-13"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
- 
+
 # 一、Hadoop 2.x的相关组件：
- 
+
 **HDFS（Hadop分布式文件系统）：负责分布式数据存储**
 
 - NameNode：存储元信息，包括文件块的分块数量及文件块的储存位置
@@ -31,7 +32,7 @@ categories = [
 **HDFS和YARN逻辑上分离，但物力物理上总是在一起。**
 
 &nbsp;
- 
+
 # 二、hadoop的相关配置文件：
 
 - **default.xml**（可在官网查看）：这配置了hadoop默认的配置选项，如果用户没有更改，那么里面的选项将会生效。

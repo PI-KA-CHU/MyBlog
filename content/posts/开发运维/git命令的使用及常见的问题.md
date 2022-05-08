@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "git命令的使用及常见的问题"
 date = "2019-02-24"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
 	"开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

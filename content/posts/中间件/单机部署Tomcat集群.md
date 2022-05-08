@@ -2,12 +2,12 @@
 author = "pikachu"
 title = "单机部署Tomcat集群"
 date = "2019-01-07"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    ""
 ]
 categories = [
-    "IT",
+    "it","中间件"
 ]
 +++
 

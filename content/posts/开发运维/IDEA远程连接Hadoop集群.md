@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "IDEA远程连接Hadoop集群"
 date = "2019-03-17"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
-    "大数据"
+    "大数据","开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

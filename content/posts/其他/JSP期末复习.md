@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "JSP期末复习"
 date = "2019-01-03"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    ""
 ]
 categories = [
-    "IT",
+    "it", "其他"
 ]
+
 +++
 
 

@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "Lombok的安装及使用"
 date = "2018-12-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "开发工具"
+	"开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

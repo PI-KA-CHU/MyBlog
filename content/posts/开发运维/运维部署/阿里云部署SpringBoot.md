@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "阿里云部署SpringBoot"
 date = "2018-11-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "开发工具",
+    "部署工具",
     "spring-boot"
 ]
 categories = [
-    "IT",
+    "it", "开发运维"
 ]
+
 +++
 
 
@@ -60,5 +61,4 @@ categories = [
 
 
 ![sql](https://user-images.githubusercontent.com/38284818/50414727-17bb4480-0852-11e9-9185-29c7a34a9bcd.JPG)
-
 

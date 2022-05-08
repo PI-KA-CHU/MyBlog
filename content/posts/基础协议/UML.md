@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "UML期末复习"
 date = "2019-01-09"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    " "
 ]
 categories = [
-    "IT",
+    "it", "基础理论"
 ]
+
 +++
 
 

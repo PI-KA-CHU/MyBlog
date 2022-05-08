@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "Java-Taglib总结"
 date = "2018-12-28"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    ""
 ]
 categories = [
-    "IT",
+    "it","java"
 ]
+
 +++
 
 

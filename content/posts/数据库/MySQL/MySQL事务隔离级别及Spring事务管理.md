@@ -2,15 +2,16 @@
 author = "pikachu"
 title = "MySQL事务隔离级别及Spring事务管理"
 date = "2019-08-04"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
+	"",
 	"mysql",
     "spring"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
+
 +++
 
 
@@ -72,7 +73,7 @@ categories = [
         - `PROPAGATION_NOT_SUPPORTED`：存在事务则被挂起
         - `PROPAGATION_NEVER`：存在事务则抛出异常
         - `PROPAGATION_NESTED`：不太明白
-    &nbsp;
+        &nbsp;
 
 ![image](https://user-images.githubusercontent.com/38284818/62423747-0f37c000-b6f7-11e9-8f2a-785e462d0d72.png)
 

@@ -8,7 +8,7 @@ tags = [
     "mysql"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
 
 +++

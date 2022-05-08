@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Spring AOP学习"
 date = "2019-07-10"
-description = "Lorem Ipsum Dolor Si Amet"
+description = ""
 tags = [
-	"java",
+	"",
     "spring"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

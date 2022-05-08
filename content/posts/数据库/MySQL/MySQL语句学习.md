@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "MySQL语句学习"
 date = "2018-10-26"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
     "mysql"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
+
 +++
 
 

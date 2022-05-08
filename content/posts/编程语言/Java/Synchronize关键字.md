@@ -5,13 +5,13 @@ date = "2019-12-17"
 description = "Lorem Ipsum Dolor Si Amet"
 draft = false
 tags = [
-    "Java",
-    "多线程",
-    "网易微专业"
+    "",
+    "多线程"
 ]
 categories = [
-    "IT"
+    "it","java"
 ]
+
 +++
 
 ## 一、初识Synchronize

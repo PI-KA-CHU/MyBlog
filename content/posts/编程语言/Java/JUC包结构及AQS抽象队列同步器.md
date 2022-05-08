@@ -5,13 +5,13 @@ date = "2020-01-03"
 description = " "
 draft = false
 tags = [
-    "Java",
-    "多线程",
-    "网易微专业"
+    "",
+    "多线程"
 ]
 categories = [
-    "IT"
+    "it","java"
 ]
+
 +++
 
 ## 前言：Concurrent包的层次结构

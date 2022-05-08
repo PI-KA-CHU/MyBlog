@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "JAVA反射技术"
 date = "2018-12-11"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    ""
 ]
 categories = [
-    "IT",
+    "it","java"
 ]
+
 +++
 
 

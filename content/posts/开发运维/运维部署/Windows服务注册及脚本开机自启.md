@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "Windows服务注册及脚本开机自启"
 date = "2019-07-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"开发工具"
+	"部署工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

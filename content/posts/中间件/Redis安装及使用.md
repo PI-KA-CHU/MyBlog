@@ -2,21 +2,21 @@
 author = "pikachu"
 title = "Redis安装及使用"
 date = "2019-01-20"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
-	"中间件"
+	"redis"
 ]
 categories = [
-    "IT"
+    "it","中间件"
 ]
+
 +++
 
 
 ## 一、redis的安装（Linux环境）
 
 1. 下载需要的redis版本：http://download.redis.io/releases/ ，将redis压缩包解压并进入其根目录`tar -zxvf redis-4.0.8.tar.gz -C /home/bigDataPresentationSys/
-`，执行`make`命令进行编译。
+   `，执行`make`命令进行编译。
     - 如果出现各种坑爹问题，参考这篇：https://blog.csdn.net/jy0902/article/details/19248299
     - **坑爹一**：注意允许的用户，我是在**root**用户下才运行成功的（应该跟**权限**有关）
     - **坑爹二**：尽量用官方**稳定版本**的，减少入一些奇奇怪怪的坑

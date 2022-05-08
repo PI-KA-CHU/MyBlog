@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "SpringBoot实现全局异常的捕获"
 date = "2019-02-13"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
+	"",
 	"spring-boot"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

@@ -2,12 +2,12 @@
 author = "pikachu"
 title = "JUnit单元测试的使用"
 date = "2018-10-10"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    ""
 ]
 categories = [
-    "IT",
+    "it","java"
 ]
 
 +++

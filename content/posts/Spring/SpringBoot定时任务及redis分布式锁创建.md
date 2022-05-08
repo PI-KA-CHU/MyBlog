@@ -4,13 +4,13 @@ title = "SpringBoot定时任务及其redis的分布式锁创建"
 date = "2019-02-23"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-	"java",
+	"",
 	"spring-boot",
-	"中间件"
+	"redis"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

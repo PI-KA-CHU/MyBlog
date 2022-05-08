@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "JDBC期末复习"
 date = "2019-01-05"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    "mysql"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
+
 +++
 
 

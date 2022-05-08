@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "MySQL分表分库学习"
 date = "2019-03-21"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
 	"mysql"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
+
 +++
 
 

@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "U盘修复工具"
 date = "2019-12-16"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
-    "实用工具"
+    "疑难杂症"
 ]
 categories = [
-    "IT"
+    "it", "其他"
 ]
+
 +++
 
 ## 问题描述

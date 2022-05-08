@@ -4,12 +4,12 @@ title = "SpringBoot整合Junit4"
 date = "2018-11-21"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-    "java",
+    "",
 	"spring-boot"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

@@ -9,7 +9,7 @@ tags = [
 	"开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
 
 +++

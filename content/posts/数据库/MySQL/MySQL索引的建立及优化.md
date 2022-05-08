@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "MySQL索引的建立及优化"
 date = "2018-12-28"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
     "mysql"
 ]
 categories = [
-    "IT","数据库"
+    "it","数据库"
 ]
+
 +++
 
 

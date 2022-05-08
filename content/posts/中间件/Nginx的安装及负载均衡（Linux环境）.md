@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Nginx的安装及负载均衡（Linux环境）"
 date = "2019-01-11"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java",
-	"中间件"
+    ""
 ]
 categories = [
-    "IT",
+    "it","中间件"
 ]
+
 +++
 
 

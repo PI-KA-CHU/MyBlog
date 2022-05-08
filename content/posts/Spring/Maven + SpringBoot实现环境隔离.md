@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Maven + SpringBoot实现环境隔离"
 date = "2019-01-02"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java",
+    "",
 	"spring-boot"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 
@@ -101,4 +101,3 @@ spring.profiles.active=@profile@
 - https://www.jianshu.com/p/ad1b8157feaf
 
 <hr>
-

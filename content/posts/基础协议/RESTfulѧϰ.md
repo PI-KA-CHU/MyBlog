@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "RESTful学习"
 date = "2019-02-20"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java"
+	""
 ]
 categories = [
-    "IT"
+    "it", "基础理论"
 ]
+
 +++
 
 
@@ -29,7 +30,7 @@ categories = [
     - 使用`/`来表示资源的`层级关系`，如：`/git/git/commit/e3af72cdafab5993d18fae056f87e1d675913d08`
     - 使用`?`用来过滤资源，如：`/pulls?state=closed`用来表示git项目中已经关闭的推入请求
     - `,`或`;`可以用来表示同级资源的关系，如：
-`/blocksha1/sha1.h/compare/e3af72cdafab5993d18fae056f87e1d675913d08;bd63e61bdf38e872d5215c07b264dcc16e4febca`
+    `/blocksha1/sha1.h/compare/e3af72cdafab5993d18fae056f87e1d675913d08;bd63e61bdf38e872d5215c07b264dcc16e4febca`
 
 
 #### 统一资源接口

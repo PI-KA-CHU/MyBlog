@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "Java Selenium的基本使用"
 date = "2019-01-01"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java",
+    "",
 	"开发工具"
 ]
 categories = [
-    "IT",
+    "it","java"
 ]
+
 +++
 
 

@@ -4,12 +4,12 @@ title = "SpringBoot中使用Spring Session实现单点登陆"
 date = "2019-02-13"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [
-	"java",
+	"",
 	"spring-boot"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

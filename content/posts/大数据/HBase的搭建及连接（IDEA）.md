@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "HBase的搭建及连接（IDEA）"
 date = "2019-03-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 

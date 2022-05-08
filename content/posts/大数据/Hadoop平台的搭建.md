@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "Hadoop平台的搭建"
 date = "2019-03-12"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
 	"大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 ## 一、搭建步骤
@@ -147,7 +148,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 	     <name>yarn.resourcemanager.hostname</name>
 	     <value>node-1</value>
 	</property>
-
+    
     <!-- NodeManager上运行的附属服务。需要配置成mapreduce_shuffle，才可MapReduce程序默认值 -->
     <property>
 	     <name>yarn.nodemanager.aux-services</name>
@@ -166,7 +167,7 @@ export PATH=$JAVA_HOME/bin:$PATH
     ```
     export HADOOP_HOME=/usr/hadoop/hadoop-2.7.7
     export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
-
+    
     # 修改完后执行命令 `resource /etc/profile`使得环境变量生效
     ```
 

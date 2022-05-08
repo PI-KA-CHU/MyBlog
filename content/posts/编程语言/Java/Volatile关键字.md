@@ -5,13 +5,13 @@ date = "2019-12-19"
 description = "Lorem Ipsum Dolor Si Amet"
 draft = false
 tags = [
-    "Java",
-    "多线程",
-    "网易微专业"
+    "",
+    "多线程"
 ]
 categories = [
-    "IT"
+    "it","java"
 ]
+
 +++
 
 
@@ -77,9 +77,9 @@ public class Singleton {
 > 通过**对编译器和处理器的重排序的限制**，从而实现了volatile的内存语义。
 - **对编译器重排序的限制**
 	- 为了实现`volatile`的内存语义，在编译器生成字节码时，会在指令序列中插入内存屏障来禁止特定类型的**处理器排序**。
-![image.png](http://ww1.sinaimg.cn/large/0061iV1igy1ga30gtwmkzj30ou0giab4.jpg)
+	![image.png](http://ww1.sinaimg.cn/large/0061iV1igy1ga30gtwmkzj30ou0giab4.jpg)
 - **对处理器重排序的限制**
-![image.png](http://ww1.sinaimg.cn/large/0061iV1igy1ga30hpgonvj30p00jawgg.jpg)
+	![image.png](http://ww1.sinaimg.cn/large/0061iV1igy1ga30hpgonvj30p00jawgg.jpg)
 	- 对于编译器来说，发现一个最优布置来最小化插入屏障的总数几乎是不可能的，为此，JMM采取了保守策略（即**在volatile写的前面和后面分别插入内存屏障，在volatile读操作后面插入两个内存屏障**）：
 		- 1. 在在每个volatile写操作的前面插入一个StoreStore屏障；
 		- 2. 在每个volatile写操作的后面插入一个StoreLoad屏障；

@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Spring AOP实现自动读写分离"
 date = "2019-05-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
+	"",
     "spring"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

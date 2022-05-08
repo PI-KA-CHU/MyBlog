@@ -2,15 +2,15 @@
 author = "pikachu"
 title = "Idea高效开发"
 date = "2019-12-13"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
-    "Java",
-    "开发工具"
+	"开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 > Idea已经称为越来越普遍的开发工具，其功能强大，并且界面简洁舒服，但是Idea快捷键用起来并没有Eclipse舒服，很多快捷键用起来很不方便，但是Idea提供了适配Eclipse的功能，需要更换的朋友可以自行百度，下面的快捷键都是切换后的，也就是大部分都是Eclipse的快捷键，对原版Idea的不适用。

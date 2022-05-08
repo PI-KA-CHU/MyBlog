@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Idea的使用及常见问题"
 date = "2019-01-18"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
-	"开发工具"
+	"", "开发工具"
 ]
 categories = [
-    "IT"
+    "it", "开发运维"
 ]
+
 +++
 
 

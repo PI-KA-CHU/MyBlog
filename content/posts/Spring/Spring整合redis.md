@@ -2,16 +2,16 @@
 author = "pikachu"
 title = "SpringBoot整合redis"
 date = "2019-01-25"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java",
+    "",
     "spring",
-	"中间件","redis",
+	"redis",
 
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

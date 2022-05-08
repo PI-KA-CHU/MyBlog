@@ -2,14 +2,15 @@
 author = "pikachu"
 title = "slf4j + log4j日志框架配置"
 date = "2018-12-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java",
+    "",
 	"log"
 ]
 categories = [
-    "IT",
+    "it","java"
 ]
+
 +++
 
 

@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "SVN的forbidden异常"
 date = "2018-11-16"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "开发工具"
+    "疑难杂症"
 ]
 categories = [
-    "IT",
+    "it", "其他"
 ]
+
 +++
 
 

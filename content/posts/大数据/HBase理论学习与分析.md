@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "HBase理论学习与分析"
 date = "2019-03-22"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 
@@ -75,7 +76,7 @@ categories = [
 
     - https://www.cnblogs.com/duanxz/p/3154487.html
     - Table中的所有行都按照**row key**的**字典序排列**，类型为**byte字节流**，Table在行的方向上分割为多个**region**；
-![image](https://user-images.githubusercontent.com/38284818/54820968-cc42f600-4cdb-11e9-90e9-88ec428aae5f.png)
+    ![image](https://user-images.githubusercontent.com/38284818/54820968-cc42f600-4cdb-11e9-90e9-88ec428aae5f.png)
     
     <br>
     
@@ -92,7 +93,7 @@ categories = [
         
         - **MemStore存储在内存中，StoreFile存储在hdfs上**；
             - 首先数据存储到MemStore上，当数据量达到一定的大小，再flush到storefile上，形成一个StoreFile。
-    ![image](https://user-images.githubusercontent.com/38284818/54822095-22656880-4cdf-11e9-8bb4-8d77f0ab0f6e.png)
+            ![image](https://user-images.githubusercontent.com/38284818/54822095-22656880-4cdf-11e9-8bb4-8d77f0ab0f6e.png)
   
     <br>
     
@@ -104,15 +105,16 @@ categories = [
         - 多行操作：**scan、multiPut**
     - **没有内置join操作**，需要使用mapreduce解决    
     
+
 <br>
 
 ## HBase的架构
- 
+
 - **架构图**
  ![image](https://user-images.githubusercontent.com/38284818/54823588-4e82e880-4ce3-11e9-802f-7f8e5a98b0ab.png)
-    
+   
     <br>
-    
+   
 - **架构角色分析**
 
     - **Client**：包含访问HBase的接口，并维护**cache**来加快对HBase的访问（即缓存遍历hbase:meta的区域数据）
@@ -125,7 +127,7 @@ categories = [
         - **实时监控`RegionServer`的上线和下线信息**，并实时通知给Master存储HBase的schema和table的**元数据**。
     
     - **Master**：
-        
+      
         - 为Region server **分配region**
         - 负责Region server的**负载均衡**
         - 发现失效的Region server并**重新分配**其上的region

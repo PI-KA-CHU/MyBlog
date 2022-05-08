@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "Oozie学习（定时任务）"
 date = "2019-08-13"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 

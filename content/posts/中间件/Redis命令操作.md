@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "Redis命令操作"
 date = "2019-01-21"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
-	"中间件"
+	"redis"
 ]
 categories = [
-    "IT"
+    "it","中间件"
 ]
+
 +++
 
 
@@ -114,5 +114,4 @@ categories = [
 - `zrank key member`：返回member的下标
 - `zrange key min max`：返回score在min到max范围内的所有member
 - `zrange key min max withscores`：返回score在min到max范围内的所有member及其对应的score
-
 

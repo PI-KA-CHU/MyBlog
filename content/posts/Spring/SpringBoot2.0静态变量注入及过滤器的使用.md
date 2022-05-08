@@ -2,14 +2,14 @@
 author = "pikachu"
 title = "SpringBoot2.0静态变量注入及过滤器的使用"
 date = "2019-01-29"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-	"java",
+	"",
 	"spring-boot"
 ]
 
 categories = [
-    "IT", "Spring"
+    "it", "spring"
 
 ]
 

@@ -2,13 +2,14 @@
 author = "pikachu"
 title = "JSP + Bootstrap +  JAVABean + Servlet + Mysql实现图片上传并分页显示"
 date = "2018-11-01"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
-    "java"
+    " "
 ]
 categories = [
-    "IT",
+    "it", "其他"
 ]
+
 +++
 
 ## 一、写在前面

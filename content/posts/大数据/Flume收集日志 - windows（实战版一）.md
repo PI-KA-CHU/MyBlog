@@ -1,15 +1,16 @@
- +++
++++
 author = "pikachu"
 title = "Flume收集日志 - windows（实战版一）"
 date = "2019-05-06"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 draft = false
 tags = [
     "大数据"
 ]
 categories = [
-    "IT"
+    "it"
 ]
+
 +++
 
 
@@ -56,6 +57,7 @@ categories = [
 
     sink类型同样有很多种，如hdfs sink、hbase sink、avor sink、logger sink等（详情参考上面链接），本案例使用的是hdfs sink，即将日志数据通过flume收集传输到hdfs。
     
+
 &nbsp;
 
 ## 二、Flume的常见使用
@@ -368,7 +370,6 @@ flume-ng agent --conf ../conf --conf-file ../conf/example.conf --name a1 -proper
 ## 六、异常及解决：
 
 - 参考：`Flume收集日志 - windows（配置版）`
-
 
 
 

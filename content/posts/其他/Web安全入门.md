@@ -2,12 +2,12 @@
 author = "pikachu"
 title = "Web安全入门"
 date = "2019-12-07"
-description = "Lorem Ipsum Dolor Si Amet"
+description = " "
 tags = [
 	"安全"
 ]
 categories = [
-    "IT"
+    "it", "其他"
 ]
 
 +++

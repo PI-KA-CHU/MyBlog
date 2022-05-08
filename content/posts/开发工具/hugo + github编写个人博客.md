@@ -15,7 +15,7 @@ categories = [
 +++
 
 
-## 
+
 
 ###  hugo + github编写个人博客
 
@@ -24,6 +24,10 @@ categories = [
 生成流程如下：
 
 - 下载hugo，并配置环境变量
+  - mac下载通过`brew install hugo`命令下载，如果失败，则直接到Hugo github下载extend版本的包
+  - 下载完配置环境变量，mac在/etc/paths.d文件夹下添加文件并输入下载的hugo路径
+  - `source [新建文件名]`会有权限问题，需要su - root在执行该命令
+
 - `hugo new site myNewSite` 创建新项目
 - 在`/content/posts` 文件夹中编写md文件
 - 在`/themes` 文件夹中存入主题文件，并复制`/themes/xxx/exampleSite/config.yaml` 文件到`/`下

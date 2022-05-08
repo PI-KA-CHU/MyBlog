@@ -50,18 +50,17 @@ categories = [
 
 1. 在github的以下位置，生产token
 
-<img src="../../images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220508233332869.png" alt="image-20220508233332869" style="zoom:50%;" />
+<img src="https://github.com/PI-KA-CHU/PI-KA-CHU.github.io/blob/master/images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220508233332869.png?raw=true" alt="image-20220508233332869" style="zoom:50%;" />
 
 
 
 2. mac搜索*Keychain*，进入以下界面，并搜索github
 
-<img src="../../images/Snipaste_2022-05-08_23-29-40.png" alt="image-20220507155512665" style="zoom:50%;" />
+<img src="https://github.com/PI-KA-CHU/PI-KA-CHU.github.io/blob/master/images/Snipaste_2022-05-08_23-29-40.png?raw=true" alt="image-20220507155512665" style="zoom:50%;" />
 
 3. 进入相关的密钥界面，在以下红框内填入第一步生成的密钥并保存即可
 
-<img src="../../images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220508234354685.png" alt="image-20220508234354685" style="zoom:80%;" />
+<img src="https://github.com/PI-KA-CHU/PI-KA-CHU.github.io/blob/master/images/:Users:zengbojia:Library:Application%20Support:typora-user-images:image-20220508234354685.png?raw=true" alt="image-20220508234354685" style="zoom:80%;" />
 
 
 
-![image-20220509000145540](images/:Users:zengbojia:Library:Application Support:typora-user-images:image-20220509000145540.png)

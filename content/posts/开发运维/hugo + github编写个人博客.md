@@ -60,4 +60,4 @@ categories = [
 
 3. 进入相关的密钥界面，在以下红框内填入第一步生成的密钥并保存即可
 
-![image](https://github.com/PI-KA-CHU/PI-KA-CHU.github.io/blob/master/images/image-20220508095706239?raw=true)
+![image](https://github.com/PI-KA-CHU/PI-KA-CHU.github.io/blob/master/images/image-20220508095706239.png?raw=true)

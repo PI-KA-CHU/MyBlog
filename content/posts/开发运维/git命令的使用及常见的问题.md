@@ -87,3 +87,11 @@ git reset --hard origin/master
 
 
 
+#### 解除SSL验证
+
+```
+问题：fatal: unable to access 'https://github.com/PI-KA-CHU/PI-KA-CHU.github.io.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+解决：git config --global http.sslVerify "false"
+```
+

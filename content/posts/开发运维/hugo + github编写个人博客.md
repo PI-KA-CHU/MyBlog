@@ -17,7 +17,7 @@ categories = [
 
 
 
-###  hugo + github编写个人博客
+###  1. hugo + github搭建个人博客
 
 - https://blog.csdn.net/qq_41136216/article/details/112674327
 
@@ -44,7 +44,7 @@ categories = [
 
 
 
-### github + mac 配置个人密钥
+### 2. github + mac 配置个人密钥
 
 
 
@@ -66,7 +66,7 @@ categories = [
 
 
 
-### Typora自动上传图片
+### 3. Typora自动上传图片
 
 **问题**：由于博客采用markdown编写，而截图的时候保存图片保存在本地，用hugo生成网站后相对路径发现了变化，这导致图片地址很难控制，即使硬编写后也会导致迁移性很差，在偶然的配置中发现了Typora的内置功能，可以整合PicGo图床上传软件，实现在插入图片时自动上传到图床并生成url。
 

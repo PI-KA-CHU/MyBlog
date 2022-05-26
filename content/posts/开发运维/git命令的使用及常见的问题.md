@@ -95,3 +95,21 @@ git reset --hard origin/master
 解决：git config --global http.sslVerify "false"
 ```
 
+
+
+#### 解决SSH端口22连接拒绝问题
+
+```
+问题：某天突然github仓库无法拉取了，报以下异常：
+connect to host github.com port 22: Connection refused无法拉取远程仓库
+
+解决：
+1. 删除SSH模式，切换为Https模式
+git remote -v
+git remote rm origin
+git remote add origin https://github.com/unlimitbladeworks/Data-Struts-Learning.git
+
+2. 如果本地有VPN，需要配置代理
+git config --global http.proxy 127.0.0.1:7890（这里为自己的代理地址和端口）
+```
+

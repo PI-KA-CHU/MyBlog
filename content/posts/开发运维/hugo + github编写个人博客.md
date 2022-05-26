@@ -87,3 +87,11 @@ categories = [
    ![image-20220509113454353](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images/image-20220509113454353.png)
 
 4. 完成后在插入图片/截图时都会自动上传并转化url
+
+
+
+**问题**：PICGO上传github图床报127.0.0.1:443异常
+
+**解决**：因为本地用了VPN代理，将PICGO代理设置为本地代理地址后正常。
+
+![image-20220526104543733](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images/image-20220526104543733.png)

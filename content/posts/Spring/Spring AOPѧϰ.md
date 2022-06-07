@@ -66,13 +66,14 @@ categories = [
 
 #### 2.1、Spring的代理模式
 
-- AOP思想的实现一般都是基于`代理模式`，在JAVA中一般采用`JDK动态代理`，但是由于JDK动态代理只能代理接口，如果代理类的话就不行了。因此，Sping AOP会自动进行切换，因为Spring同时支持`JDK动态代理`、`CGLIB`和`AspectJ`，当对象有实现接口时，会默认采用JDK动态代理，否则使用CGLIB代理。
+- 代理模式：代理模式在Java中是一种比较常见的设计模式。通过对目标类创建代理类，进而对目标类进行功能增强。包括以下三要素：共同接口、目标类、代理类
+- AOP思想的实现一般都是基于`代理模式`，在JAVA中一般采用`JDK动态代理`，但是由于JDK动态代理只能代理接口，如果代理类的话就不行了。因此，Sping AOP会自动进行切换，因为Spring同时支持`JDK动态代理`、`CGLIB`和`AspectJ`，当对象有实现接口时，会默认采用JDK动态代理，否则使用CGLIB代理
     - 如果目标对象的实现类`实现了接口`，Spring AOP 将会采用 `JDK 动态代理` 来生成 AOP 代理类；
         - 实现了接口如何强制使用CGLIB实现AOP？
          （1）添加CGLIB库，SPRING_HOME/cglib/*.jar
           （2）在spring配置文件中加入`<aop:aspectj-autoproxy proxy-target-class="true"/>`
     
-    - 如果目标对象的实现类`没有实现接口`，Spring AOP 将会采用 `CGLIB` 来生成 AOP 代理类——不过这个选择过程对开发者完全透明、开发者也无需关心。
+    - 如果目标对象的实现类`没有实现接口`，Spring AOP 将会采用 `CGLIB` 来生成 AOP 代理类——不过这个选择过程对开发者完全透明、开发者也无需关心
 
 
 #### 2.2、CGLIB和JDK动态代理的区别

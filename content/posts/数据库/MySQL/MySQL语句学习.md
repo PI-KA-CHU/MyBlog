@@ -70,3 +70,13 @@ ORDER BY
 		className
 	)
 ```
+
+- Join的用法
+
+```
+inner join：理解为“有效连接”，两张表中都有的数据才会显示
+left join：理解为“有左显示”
+right join：理解为“有右显示”
+full join：理解为“全连接”，两张表中所有数据都显示，实际就是inner +(left-inner)+(right-inner)
+```
+

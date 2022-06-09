@@ -13,13 +13,11 @@ categories = [
 
 +++
 
-## 
-
-
+## MySQL执行一条语句的过程
 
 - https://www.pdai.tech/md/db/sql-mysql/sql-mysql-execute.html
 
-
+![image-20220606095932557](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images/image-20220606095932557.png)
 
 
 

@@ -122,16 +122,83 @@ Java 中对象地址操作主要使用 Unsafe 调用了 C 的 allocate 和 free 
 
 &nbsp;
 
-## 三、OOM实战
+## 三、GC+OOM实战
 
 
+
+### 3.1 JVM常用工具
+
+
+
+#### 标准命令行终端
+
+（i have 2 polices man）
 
 如何获取堆和栈的dump文件？（dump为JVM运行时的快照）
 
-- jmap命令获取堆dump
-- jstack命令获取线程调用栈dump
+- jmap：获取堆dump
+- jstack：获取线程调用栈dump
+- jps：
+- jinfo：
+- jstat：
+- jstack：
+- jmap：
 
 
+
+#### 整合型命令行终端
+
+- jcmd
+- arthas
+- vjtools
+
+
+
+#### 可视化界面
+
+- JConsole
+- JVisualvm
+- JProfiler（进阶）
+
+
+
+### 3.2 GC实战
+
+
+
+#### 判断GC问题核心指标
+
+- **延迟（Latency）**：也可以理解为最大停顿时间，即垃圾收集过程中一次 STW 的最长时间，越短越好，一定程度上可以接受频次的增大，GC 技术的主要发展方向。
+- **吞吐量（Throughput）：**应用系统的生命周期内，由于 GC 线程会占用 Mutator 当前可用的 CPU 时钟周期，吞吐量即为 Mutator 有效花费的时间占系统总运行时间的百分比，例如系统运行了 100 min，GC 耗时 1 min，则系统吞吐量为 99%，吞吐量优先的收集器可以接受较长的停顿。
+
+
+
+#### GC日志分析
+
+1. 打印GC日志
+   - `-XX:+PrintGCDetails`：表示的是打印GC日志详情
+   - `-XX:+PrintGCTimeStamps`：表示打印GC时间戳
+   - `-Xloggc: ./gc.log`：表示在当前目录下生成gc.log文件
+
+```
+-XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:./gc.log
+```
+
+
+
+2. gceasy在线工具：https://blog.csdn.net/CoderBruis/article/details/101234738
+
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640.png)
+
+
+
+#### 重点GC Case
+
+- **System.gc()：**手动触发GC操作
+- **CMS：**CMS GC 在执行过程中的一些动作，重点关注 CMS Initial Mark 和 CMS Final Remark 两个 STW 阶段
+- **Promotion Failure：**Old 区没有足够的空间分配给 Young 区晋升的对象（即使总可用内存足够大）
+- **Concurrent Mode Failure：**CMS GC 运行期间，Old 区预留的空间不足以分配给新的对象，此时收集器会发生退化，严重影响 GC 性能，下面的一个案例即为这种场景
+- **GCLocker Initiated GC：**如果线程执行在 JNI 临界区时，刚好需要进行 GC，此时 GC Locker 将会阻止 GC 的发生，同时阻止其他线程进入 JNI 临界区，直到最后一个线程退出临界区时触发一次 GC
 
 
 

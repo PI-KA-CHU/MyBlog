@@ -205,6 +205,51 @@ Java 中对象地址操作主要使用 Unsafe 调用了 C 的 allocate 和 free 
 
 
 
+#### GC问题具体分类
+
+- **Unexpected GC**：意外发生的 GC，实际上不需要发生，我们可以通过一些手段去避免。
+  - **Space Shock：**空间震荡问题，参见“场景一：动态扩容引起的空间震荡”。
+  - **Explicit GC：**显示执行 GC 问题，参见“场景二：显式 GC 的去与留”。
+- **Full GC**：全量收集的 GC，对整个堆进行回收，STW 时间会比较长，一旦发生，影响较大。参见“场景七：内存碎片&收集器退化”。
+- **MetaSpace：**元空间回收引发问题，参见“场景三：MetaSpace 区 OOM”。
+- **Direct Memory：**直接内存（也可以称作为堆外内存）回收引发问题，参见“场景八：堆外内存 OOM”。
+- **JNI：**本地 Native 方法引发问题，参见“场景九：JNI 引发的 GC 问题”。
+
+
+
+#### 常见场景分析与解决
+
+1. **场景一：动态扩容引起的空间震荡**
+
+- **现象**：服务**刚刚启动时 GC 次数较多**，最大空间剩余很多但是依然发生 GC，这种情况我们可以通过观察 GC 日志或者通过监控工具来观察堆的空间变化情况即可。GC Cause 一般为 Allocation Failure，且在 GC 日志中会观察到经历一次 GC ，堆内各个空间的大小会被调整。
+- **原因**：在 JVM 的参数中 `-Xms` 和 `-Xmx` 设置的不一致，在初始化时只会初始 `-Xms` 大小的空间存储信息，每当空间不够用时再向操作系统申请，这样的话必然要进行一次 GC。
+- **解决**：尽量**将成对出现的空间大小配置参数设置成固定的**，如 `-Xms` 和 `-Xmx`，`-XX:MaxNewSize` 和 `-XX:NewSize`，`-XX:MetaSpaceSize` 和 `-XX:MaxMetaSpaceSize` 等。
+
+
+
+2. **场景三：MetaSpace 区 OOM**
+
+- **现象**：JVM 在启动后或者某个时间点开始，**MetaSpace 的已使用大小在持续增长，同时每次 GC 也无法释放，调大 MetaSpace 空间也无法彻底解决**
+- **原因**：
+  - **MetaSpace 内存管理：**类和其元数据的生命周期与其对应的类加载器相同，只要类的类加载器是存活的，在 Metaspace 中的类元数据也是存活的，不能被回收
+  - **MetaSpace 弹性伸缩：**由于 MetaSpace 空间和 Heap 并不在一起，所以这块的空间可以不用设置或者单独设置，一般情况下避免 MetaSpace 耗尽 VM 内存都会设置一个 MaxMetaSpaceSize，在运行过程中，如果实际大小小于这个值，JVM会动态调整其大小。为了避免弹性伸缩带来的额外 GC 消耗，我们会将 `-XX:MetaSpaceSize` 和 `-XX:MaxMetaSpaceSize`两个值设置为固定的，但是这样也会导致在空间不够的时候无法扩容，然后频繁地触发 GC，最终 OOM。所以关键原因就是 ClassLoader 不停地在内存中 load 了新的 Class ，一般这种问题都发生在**动态类加载**等情况上
+- **策略**：了解MetaSpace的内存管理后，如何定位和解决就很简单了，可以 dump 快照之后通过 JProfiler 或 MAT 观察 Classes 的 Histogram（直方图） 即可，或者直接通过命令即可定位，看一下具体是哪个包下的 **Class 增加**较多就可以定位了
+- **小结**：原理理解比较复杂，但定位和解决问题会比较简单，经常会出问题的几个点有 *Orika 的 classMap、JSON 的 ASMSerializer、Groovy 动态加载类*等，基本都集中在*反射、Javasisit 字节码增强、CGLIB 动态代理、OSGi 自定义类加载器等*的技术点上。另外就是及时给 MetaSpace 区的使用率加一个监控，如果指标有波动提前发现并解决问题。
+
+
+
+3. **场景四：过早晋升**
+
+- **现象**：
+
+
+
+
+
+
+
+
+
 #### OOM
 
 - OOM场景：https://juejin.cn/post/6873299829784018952

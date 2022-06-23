@@ -26,6 +26,8 @@ categories = [
 
 ## 一、JMM模型
 
+![image-20220622231028306](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/imagesimage-20220622231028306.png)
+
 ![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images/640)
 
 - GC 主要工作在 Heap 区和 MetaSpace 区（上图蓝色部分）
@@ -68,7 +70,7 @@ Java 中对象地址操作主要使用 Unsafe 调用了 C 的 allocate 和 free 
 #### 2.3.1 识别垃圾
 
 - **引用计数法（Reference Counting）**：对每个对象的引用进行计数，每当有一个地方引用它时计数器+1，引用失效则-1，引用计数器放在对象头中。虽然循环引用问题可以通过Recycler算法解决，但是在多线程环境下，引用计数变更需要进行同步操作，性能较低，早期的编程语言才采用此算法。
-- **可达性分析，又称引用链法（Tracing GC）：**从 GC Root 开始进行对象搜索，可以被搜索到的对象即为可达对象，整个连通图之外的对象便可以作为垃圾被回收掉。目前 Java 中主流的虚拟机均采用此算法。
+- **可达性分析，又称引用链法（Tracing GC）：**从 GC Root （两栈两方法：JVM栈、本地方法栈、方法区的常量池、方法区的静态属性）开始进行对象搜索，可以被搜索到的对象即为可达对象，整个连通图之外的对象便可以作为垃圾被回收掉。目前 Java 中主流的虚拟机均采用此算法。
 
 &nbsp;
 
@@ -223,9 +225,14 @@ Java 中对象地址操作主要使用 Unsafe 调用了 C 的 allocate 和 free 
 
 #### 常见场景分析与解决
 
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622235843314.png)
+
 1. **场景一：动态扩容引起的空间震荡**
 
 - **现象**：服务**刚刚启动时 GC 次数较多**，最大空间剩余很多但是依然发生 GC，这种情况我们可以通过观察 GC 日志或者通过监控工具来观察堆的空间变化情况即可。GC Cause 一般为 Allocation Failure，且在 GC 日志中会观察到经历一次 GC ，堆内各个空间的大小会被调整。
+
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622230646396.png)
+
 - **原因**：在 JVM 的参数中 `-Xms` 和 `-Xmx` 设置的不一致，在初始化时只会初始 `-Xms` 大小的空间存储信息，每当空间不够用时再向操作系统申请，这样的话必然要进行一次 GC。
 - **解决**：尽量**将成对出现的空间大小配置参数设置成固定的**，如 `-Xms` 和 `-Xmx`，`-XX:MaxNewSize` 和 `-XX:NewSize`，`-XX:MetaSpaceSize` 和 `-XX:MaxMetaSpaceSize` 等。
 
@@ -242,17 +249,84 @@ Java 中对象地址操作主要使用 Unsafe 调用了 C 的 allocate 和 free 
 
 
 
-3. **场景四：过早晋升**
+3. **场景四：过早晋升***
 
-- **现象**：
+- **现象**：这种场景主要发生在分代的收集器上，90% 的对象朝生夕死，只有在 Young 区经历过几次 GC 的洗礼后才会晋升到 Old 区，每经历一次 GC 对象的 GC Age 就会增长 1，最大通过 `-XX:MaxTenuringThreshold` 来控制。通常可以观察以下几种现象来判断是否发生了过早晋升。
+
+  - 分配速率接近于晋升速率，对象晋升年龄过小。
+  - Full GC比较频繁，并且GC后Old区的变化比例很大。
+
+  过早晋升的危害：
+
+  - YGC频繁，总吞吐量下降
+  - FGC频繁，有较大停顿时间
+
+  ![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622231511224.png)
+
+- **原因**：
+
+  - **Young/Eden区过小**：Young区很快被填满并且频繁GC，导致对象年龄快速上升（默认年龄为15），并且被过早晋升到Old区（原本在Young区就可以被回收），而YGC采用的是复制算法，频繁的YGC又会导致大量对象的Copy，进而降低YGC效率，形成恶性循环。
+  - **分配速率过大**：（内存增加速度 > 垃圾回收速度）可以观察出问题前后 Mutator 的分配速率，如果有明显波动可以尝试观察网卡流量、存储类中间件慢查询日志等信息，看是否有大量数据被加载到内存中。
+
+- **策略**：
+
+  - **增大Young区**，通常Old区设定为存活对象大小的2-3倍，剩下的空间可以预留给Young区。
+  - 如果是分配速率问题：
+    - **偶发较大**：通过内存分析工具找到问题代码，从业务逻辑上做一些优化。
+    - **一直较大**：当前的 Collector 已经不满足 Mutator 的期望了，这种情况要么扩容 Mutator 的 VM，要么调整 GC 收集器类型或加大空间。
 
 
 
+4. **场景六：单次 CMS Old GC 耗时长 \***
+
+- **现象**：CMS GC 单次 STW 最大超过 1000ms，不会频繁发生，如下图所示最长达到了 8000ms。某些场景下会引起“雪崩效应”，这种场景非常危险，我们应该尽量避免出现。
+
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622003941247.png)
+
+- **原因**：
+  - CMS 在回收的过程中，STW 的阶段主要是 *Init Mark* 和 *Final Remark* 这两个阶段，也是导致 CMS Old GC 最多的原因。
+    - *Init Mark* ：从 GC Root 出发标记 Old 中的对象，处理完成后借助 BitMap 处理下 Young 区对 Old 区的引用，整个过程基本都比较快，很少会有较大的停顿。
+    - *Final Remark*：Final Remark 的开始阶段与 Init Mark 处理的流程相同，但是后续多了 Card Table 遍历、Reference 实例的清理并将其加入到 Reference 维护的 `pend_list` 中，如果要收集元数据信息，还要清理 SystemDictionary、CodeCache、SymbolTable、StringTable 等组件中不再使用的资源。其中最容易出问题的是 ：
+      - Reference 中的 FinalReference：主要观察 `java.lang.ref.Finalizer` 对象的 dominator tree，找到泄漏的来源。经常会出现问题的几个点有 Socket 的 `SocksSocketImpl` 、Jersey 的 `ClientRuntime`、MySQL 的 `ConnectionImpl` 等等
+      - scrub symbol table 表示清理元数据符号引用耗时：符号引用是 Java 代码被编译成字节码时，方法在 JVM 中的表现形式，生命周期一般与 Class 一致，当 `_should_unload_classes` 被设置为 true 时在 `CMSCollector::refProcessingWork()` 中与 Class Unload、String Table 一起被处理。
+- **策略**：由上述分析可知，问题主要来自Final Remark阶段，其中最容易出问题的是 【Reference 中的 FinalReference 和元数据信息处理中的 scrub symbol table 两个阶段】，通常不会大面积同时爆发，很多时候是单台的STW比较长，如果业务影响比较大，及时摘掉流量，具体后续优化策略如下：
+  - FinalReference：找到内存来源后通过优化代码的方式来解决，如果短时间无法定位可以增加 `-XX:+ParallelRefProcEnabled` 对 Reference 进行并行处理。【在 Reference 类的问题处理方面，不管是 FinalReference，还是 SoftReference、WeakReference 核心的手段就是**找准时机 dump 快照**，然后用内存分析工具来分析。】
+  - symbol table：观察 MetaSpace 区的历史使用峰值，以及每次 GC 前后的回收情况，一般没有使用动态类加载或者 DSL 处理等，MetaSpace 的使用率上不会有什么变化，这种情况可以通过 `-XX:-CMSClassUnloadingEnabled` 来避免 MetaSpace 的处理，JDK8 会默认开启 CMSClassUnloadingEnabled，这会使得 CMS 在 CMS-Remark 阶段尝试进行类的卸载。
 
 
 
+4. **场景七：内存碎片&收集器退化**
 
 
+
+5. **场景八：堆外内存 OOM**
+
+- **现象**：内存使用率不断上升，甚至开始使用 SWAP 内存，同时可能出现 GC 时间飙升，线程被 Block 等现象，通过 top 命令发现 Java 进程的 RES 甚至超过了 -Xmx 的大小。出现这些现象时，基本可以确定是出现了堆外内存泄漏。
+
+- **原因**：
+
+  - 原因一：通过 `UnSafe#allocateMemory`，`ByteBuffer#allocateDirect` 主动申请了堆外内存而没有释放，常见于 NIO、Netty 等相关组件。
+  - 原因二：代码中有通过 JNI 调用 Native Code 申请的内存没有释放。
+
+- 策略：
+
+  - 策略一：JVM 使用 `-XX:MaxDirectMemorySize=size` 参数来控制可申请的堆外内存的最大值。在 Java 8 中，如果未配置该参数，默认和 `-Xmx` 相等。可以通过 Debug 的方式确定使用堆外内存的地方是否正确执行了释放内存的代码。另外，需要检查 JVM 的参数是否有 `-XX:+DisableExplicitGC` 选项，如果有就去掉，因为该参数会使 System.gc 失效。（场景二：显式 GC 的去与留）
+
+  - 策略二：Google perftools（统计调用 malloc 时进行内存分配的情况） + Btrace（对线上的Java调用栈进行追踪喝监控）工具进行分析，
+
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622224641446.png)
+
+
+
+#### 基本的GC日志参数
+
+- `XX:+HeapDumpOnOutOfMemoryError`：OOM时打印堆快照
+
+![图片](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/images640-20220622225239025.png)
+
+&nbsp;
+
+&nbsp;
 
 #### OOM
 

@@ -17,7 +17,13 @@ categories = [
 
 ## Netty实战
 
-demo：https://github.com/PI-KA-CHU/netty-demo.git/
+个人demo：
+
+- https://github.com/PI-KA-CHU/netty-demo.git/
+
+大佬demo：
+
+- https://github.com/waylau/netty-4-user-guide-demos/tree/master/netty4-demos/src/main/java/com/waylau/netty
 
 
 

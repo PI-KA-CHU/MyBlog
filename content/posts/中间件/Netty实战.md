@@ -17,6 +17,16 @@ categories = [
 
 ## Netty实战
 
+个人demo：
+
+- https://github.com/PI-KA-CHU/netty-demo.git/
+
+大佬demo：
+
+- https://github.com/waylau/netty-4-user-guide-demos/tree/master/netty4-demos/src/main/java/com/waylau/netty
+
+
+
 ### 前言
 
 > 这几天进行了情报部通信相关的开发，想要Netty加入到开发过程中，在整合到过程出现了一些难以解决的问题，情报板发送分为四个阶段：

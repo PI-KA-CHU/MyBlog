@@ -27,6 +27,37 @@ categories = [
 
 
 
+## Go环境搭建
+
+1. 安装go环境
+
+   - 官方下载环境包直接next走就行
+
+   - 查看go的安装目录
+
+     ```
+     # 其中GOROOT即为安装环境，GOPATH即GO项目工作目录
+     go env
+     ```
+
+2. 下载Go开发工具
+
+   我才用的是利用已有的Java Idea安装go插件，出现无法配置Go SDK的情况
+
+   - 解决（注意标点格式）：https://www.jianshu.com/p/4dd25a1744aa
+
+3. 选择SDK-新建项目-新建main包	![image-20220731235322242](https://raw.githubusercontent.com/PI-KA-CHU/Image-OSS/main/imagesimage-20220731235322242.png)
+
+
+
+
+
+## Go基础知识
+
+
+
+
+
 
 
 ## Go常见面试题

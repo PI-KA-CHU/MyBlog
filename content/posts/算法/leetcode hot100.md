@@ -1,5 +1,3 @@
----
-
 author = "pikachu"
 title = "leetcode hot100"
 date = "2022-07-28"

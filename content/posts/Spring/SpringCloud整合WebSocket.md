@@ -1,7 +1,7 @@
 +++
 
 author = "pikachu"
-title = "SpringBoot整合redis"
+title = "SpringCloud整合WebSocket"
 date = "2022-06-28"
 description = " 微服务下整合websocket"
 tags = [
